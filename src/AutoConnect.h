@@ -216,7 +216,8 @@ class AutoConnect {
   typedef std::function<bool(IPAddress)>  DetectExit_ft;
   void  onDetect(DetectExit_ft fn);
   void  onNotFound(WebServerClass::THandlerFunction fn);
-
+  station_config_t   _credential;
+  
  protected:
   typedef enum {
     AC_RECONNECT_SET,
@@ -286,7 +287,7 @@ class AutoConnect {
 
   /** Saved configurations */
   AutoConnectConfig  _apConfig;
-  station_config_t   _credential;
+  //station_config_t   _credential;
   uint8_t       _hiddenSSIDCount;
   int16_t       _scanCount;
   uint8_t       _connectCh;
